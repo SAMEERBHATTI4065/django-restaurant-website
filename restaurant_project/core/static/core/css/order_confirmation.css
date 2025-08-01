@@ -1,0 +1,70 @@
+/* static/css/order_confirmation.css */
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(to right, #f9f3ec, #fff5e1);
+    color: #333;
+}
+
+.confirmation-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.card {
+    background-color: white;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    text-align: center;
+}
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    color: #d35400;
+    margin-bottom: 10px;
+    font-size: 2.2rem;
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    color: #666;
+}
+
+.order-info {
+    text-align: left;
+    margin-bottom: 20px;
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+.next-step {
+    background: #fff0d9;
+    border-left: 4px solid #e67e22;
+    padding: 15px;
+    margin-bottom: 25px;
+    font-size: 0.95rem;
+}
+
+.highlight {
+    font-weight: bold;
+    color: #c0392b;
+}
+
+.btn {
+    background-color: #e67e22;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background-color: #d35400;
+}

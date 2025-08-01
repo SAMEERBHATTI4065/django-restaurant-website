@@ -1,0 +1,91 @@
+/* login.css */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background: linear-gradient(to right, #ffecd2, #fcb69f);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    width: 100%;
+    max-width: 420px;
+    background-color: #fff;
+    padding: 30px 25px;
+    border-radius: 15px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+}
+
+.form-box h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 25px;
+    font-size: 28px;
+}
+
+.login-form p {
+    margin-bottom: 15px;
+}
+
+.login-form label {
+    display: block;
+    margin-bottom: 5px;
+    color: #444;
+    font-weight: 500;
+}
+
+.login-form input {
+    width: 100%;
+    padding: 10px 12px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    transition: 0.3s ease;
+}
+
+.login-form input:focus {
+    outline: none;
+    border-color: #f0932b;
+    box-shadow: 0 0 5px #f0932b;
+}
+
+.login-form button {
+    width: 100%;
+    background-color: #e67e22;
+    color: white;
+    font-size: 16px;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background 0.3s ease;
+}
+
+.login-form button:hover {
+    background-color: #d35400;
+}
+
+.register-link {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 15px;
+}
+
+.register-link a {
+    color: #e67e22;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.register-link a:hover {
+    text-decoration: underline;
+}

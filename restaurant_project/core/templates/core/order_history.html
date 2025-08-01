@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Orders | Flavor Haven</title>
+    <link rel="stylesheet" href="{% static 'core/css/order_history.css'%}">
+</head>
+<body>
+    <div class="orders-container">
+        <h2>🧾 My Order History</h2>
+
+        {% if orders %}
+            {% for order in orders %}
+                <div class="order-box">
+                    <h3>Order #{{ order.id }}</h3>
+                    <p><strong>Date:</strong> {{ order.created_at }}</p>
+                    <p>
+                        <strong>Status:</strong> 
+                        {% if order.is_completed %}
+                            <span class="status completed">✅ Completed</span>
+                        {% else %}
+                            <span class="status">⏳ Pending</span>
+                        {% endif %}
+                    </p>
+
+                    <ul>
+                        {% for item in order.items.all %}
+                            <li>{{ item.quantity }} x {{ item.menu_item.name }}</li>
+                        {% endfor %}
+                    </ul>
+
+                    <p><strong>Total:</strong> PKR {{ order.details.total_amount }}</p>
+                    <p><strong>Address:</strong> {{ order.details.address }}</p>
+                </div>
+            {% endfor %}
+        {% else %}
+            <div class="no-orders">
+                <p>You haven't placed any orders yet.</p>
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>

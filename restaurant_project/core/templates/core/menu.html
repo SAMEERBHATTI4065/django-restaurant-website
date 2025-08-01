@@ -1,0 +1,32 @@
+
+<!-- core/templates/core/home.html -->
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Our Menu</title>
+    <link rel="stylesheet" href="{% static '/core/css/menu.css' %}">
+</head>
+<body>
+    <h1>🍽 Our Menu</h1>
+    {% if user.is_authenticated %}
+    <a href="{% url 'order_history' %}">🧾 My Orders</a>
+{% endif %}
+
+    <div class="menu-container">
+        {% for item in items %}
+        <div class="card">
+            {% if item.image %}
+            <img src="{{ item.image.url }}" alt="{{ item.name }}">
+            {% endif %}
+            <h3>{{ item.name }}</h3>
+            <p>{{ item.description }}</p>
+            <strong>PKR {{ item.price }}</strong><br>
+            <a href="{% url 'add_to_cart' item.id %}" class="btn">Add to Cart</a>
+
+
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>

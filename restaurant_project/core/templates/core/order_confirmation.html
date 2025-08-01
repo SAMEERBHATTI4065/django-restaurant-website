@@ -1,0 +1,33 @@
+<!-- templates/core/order_confirmation.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Order Confirmation</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static '/core/css/order_confirmation.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="confirmation-container">
+        <div class="card">
+            <h1>🍽️ Thank You for Your Order!</h1>
+            <p class="subtitle">Your order has been successfully placed.</p>
+
+            <div class="order-info">
+                <p><strong>Order ID:</strong> #{{ order.id }}</p>
+                <p><strong>Name:</strong> {{ order.customer.username }}</p>
+                <p><strong>Total Amount:</strong> ${{ order.total_price }}</p>
+                <p><strong>Date:</strong> {{ order.created_at|date:"F j, Y - g:i A" }}</p>
+            </div>
+
+            <div class="next-step">
+                <p>We’re preparing your delicious meal and will deliver it soon!</p>
+                <p class="highlight">Estimated delivery: <strong>30-45 minutes</strong></p>
+            </div>
+
+            <a href="{% url 'home' %}" class="btn">Back to Home</a>
+        </div>
+    </div>
+</body>
+</html>

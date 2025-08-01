@@ -1,0 +1,62 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Your Cart</title>
+    <link rel="stylesheet" href="{% static 'core/css/cart.css' %}">
+</head>
+<body>
+    <h1>Your Cart</h1>
+
+    {% if cart_items %}
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Item</th>
+                    <th>Price</th>
+                    <th>Qty</th>
+                    <th>Subtotal</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for cart_item in cart_items %}
+                <tr>
+                    <td>{{ cart_item.item.name }}</td>
+                    <td>PKR {{ cart_item.item.price }}</td>
+                    <td>{{ cart_item.quantity }}</td>
+                    <td>PKR {{ cart_item.subtotal }}</td>
+                    <td>
+                        <!-- Increase Quantity Button -->
+                        <a href="{% url 'add_to_cart' cart_item.item.id %}" class="btn">➕</a>
+                        
+                        <!-- Decrease Quantity Button -->
+                        <a href="{% url 'decrease_quantity' cart_item.item.id %}" class="btn">➖</a>
+                        
+                        <!-- Remove Item Button -->
+                        <a href="{% url 'remove_from_cart' cart_item.item.id %}" class="btn-remove">❌ Remove</a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <h3>Total: PKR {{ total }}</h3>
+
+        <div class="cart-actions">
+            <!-- Link to Menu -->
+            <a href="{% url 'menu' %}" class="btn">🔙 Back to Menu</a>
+            
+            <!-- Link to Clear Cart -->
+            <a href="{% url 'clear_cart' %}" class="btn-remove">🗑 Clear Cart</a>
+            <a href="{% url 'checkout' %}" class="btn">✅ Proceed to Checkout</a>
+        </div>
+
+    {% else %}
+        <p>Your cart is empty.</p>
+        <a href="{% url 'menu' %}" class="btn">Go to Menu</a>
+
+    {% endif %}
+</body>
+</html>

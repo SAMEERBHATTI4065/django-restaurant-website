@@ -1,0 +1,70 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Flavor Haven 🍽️</title>
+    <link rel="stylesheet" href="{% static 'core/css/home.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- 🌐 NAVBAR -->
+<nav class="navbar">
+    <div class="logo">
+        <a href="{% url 'home' %}">Flavor Haven</a>
+    </div>
+    <ul class="nav-links">
+        <li><a href="{% url 'menu' %}">Menu</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+    <div class="auth-buttons">
+        {% if user.is_authenticated %}
+            <span>Hello, {{ user.username }}</span>
+            <a href="{% url 'logout' %}" class="btn">Logout</a>
+        {% else %}
+            <a href="{% url 'login' %}" class="btn">Login</a>
+            <a href="{% url 'register' %}" class="btn">Register</a>
+        {% endif %}
+    </div>
+</nav>
+
+<div class="container">
+    <!-- 🏠 HERO SECTION -->
+    <div class="hero">
+        <div class="overlay"></div>
+        <div class="hero-content">
+            <h1>Welcome to <span>Flavor Haven</span></h1>
+            <p>Delicious Italian Cuisine Made Fresh Daily 🍝</p>
+            <a href="{% url 'menu' %}" class="btn">Explore Our Menu</a>
+        </div>
+    </div>
+
+    <!-- 🍽️ FEATURED MENU -->
+    <section class="featured-menu">
+        <h2>Chef's Specials</h2>
+        <div class="menu-items">
+            <div class="menu-item">
+                <img src="/media/menu_images/pizza1.jpeg" alt="Classic Lasagna">
+                <h3>Classic Lasagna</h3>
+                <p>Layers of pasta, rich meat sauce & creamy béchamel.</p>
+            </div>
+            <div class="menu-item">
+                <img src="/media/menu_images/pizza2.jpeg" alt="Margherita Pizza">
+                <h3>Margherita Pizza</h3>
+                <p>Fresh tomatoes, mozzarella & basil on a crispy crust.</p>
+            </div>
+            <div class="menu-item">
+                <img src="/media/menu_images/pizza3.jpeg" alt="Tiramisu">
+                <h3>Tiramisu</h3>
+                <p>Classic dessert with coffee-soaked ladyfingers & mascarpone.</p>
+            </div>
+        </div>
+    </section>
+</div>
+
+</body>
+</html>
