@@ -35,4 +35,35 @@ This is a full-stack Django-based restaurant website that allows users to:
 
 ## 📁 Folder Structure
 
+restaurant_project/
+│
+├── core/
+│ ├── models.py # MenuItem, Order, OrderDetails models
+│ ├── views.py # All business logic and cart functionality
+│ ├── templates/core/ # HTML templates (menu, cart, checkout, etc.)
+│ └── static/core/css/ # CSS styles for different pages
+│
+├── media/menu_images/ # Uploaded food images
+├── manage.py
+└── db.sqlite3 # Database file
+
+---
+
+## ⚙️ How to Run Locally
+
+```bash
+git clone https://github.com/SAMEERBHATTI4065/django-restaurant-website.git
+cd django-restaurant-website
+python -m venv env
+source env/bin/activate  # or env\Scripts\activate on Windows
+pip install -r requirements.txt
+python manage.py migrate
+python manage.py runserver
+
+
+Then open your browser and go to:
+http://127.0.0.1:8000/
+
+
+
 
