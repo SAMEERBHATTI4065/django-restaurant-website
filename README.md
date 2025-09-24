@@ -1,69 +1,39 @@
-# 🍽️ Django Restaurant Website
+# Hey, I'm Hammad Ali 👋
 
-This is a full-stack Django-based restaurant website that allows users to:
-
-- Register/Login and manage their profile
-- Browse a dynamic food menu with images
-- Add items to cart and view subtotal
-- Choose payment method (Cash/Card)
-- Complete the checkout process
-- View order confirmation and (optionally) history
+## 🚀 Building intelligent systems with Python & AI
 
 ---
 
-## 🛠️ Features
+### **Hammad Ali Tahir**
+`HammadAli08` · he/him
 
-- ✅ **User Authentication** (Register, Login, Logout)
-- ✅ **Dynamic Menu System** (Food items stored in database)
-- ✅ **Cart Functionality** (Add, Remove, Decrease Quantity, Clear Cart)
-- ✅ **Order Placement** (Form-based checkout with validation)
-- ✅ **Payment Method Selection** (Cash or Card)
-- ✅ **Session Management** (Cart stored in session)
-- ✅ **Admin Panel** for managing menu and orders
-- ✅ **Responsive UI** (Custom CSS)
+**Lahore, Pakistan**
 
----
+CS'26 | Data Science & Machine Learning | NLP | Python, Pandas, Scikit-Learn, TensorFlow  
+📍 14 followers · 5 following  
 
-## 🔧 Technologies Used
-
-- **Backend**: Python, Django
-- **Frontend**: HTML5, CSS3 (custom styles)
-- **Database**: SQLite3 (default Django database)
-- **Deployment Ready**: Easily deployable on platforms like Heroku, Vercel (with configuration)
+### **📍 Contact Info**
+- **Location:** Lahore, Pakistan
+- **Email:** your.email@domain.com
+- **LinkedIn:** [Hammad Ali](https://linkedin.com/in/your-profile)
+- **LeetCode:** [Hammad_Ali_08](https://leetcode.com/u/Hammad_Ali_08/)
 
 ---
 
-## 📁 Folder Structure
+## **🛠️ Technologies & Tools**
 
-restaurant_project/
-│
-├── core/
-│ ├── models.py # MenuItem, Order, OrderDetails models
-│ ├── views.py # All business logic and cart functionality
-│ ├── templates/core/ # HTML templates (menu, cart, checkout, etc.)
-│ └── static/core/css/ # CSS styles for different pages
-│
-├── media/menu_images/ # Uploaded food images
-├── manage.py
-└── db.sqlite3 # Database file
+### **Programming Languages**
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+
+### **Data Science & ML**
+![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
+![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white)
+
+## **📊 GitHub Stats**
+
+![Your GitHub stats](https://github-readme-stats.vercel.app/api?username=HammadAli08&show_icons=true&theme=radical)
 
 ---
 
-## ⚙️ How to Run Locally
-
-```bash
-git clone https://github.com/SAMEERBHATTI4065/django-restaurant-website.git
-cd django-restaurant-website
-python -m venv env
-source env/bin/activate  # or env\Scripts\activate on Windows
-pip install -r requirements.txt
-python manage.py migrate
-python manage.py runserver
-
-
-Then open your browser and go to:
-http://127.0.0.1:8000/
-
-
-
-
+⭐ *From [HammadAli08](https://github.com/HammadAli08)*
